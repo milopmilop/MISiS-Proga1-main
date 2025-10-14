@@ -13,10 +13,10 @@ def normalize(text, casefold, yo2e):
     
     return text
 
-# print(normalize('ПрИвЕт\nМИр\t',True,True))
-# print(normalize('ёжик, Ёлка',True,True))
-# print(normalize('Hello\r\nWorld',True,True))
-# print(normalize('двойные   пробелы',True,True))
+print(normalize('ПрИвЕт\nМИр\t',True,True))
+print(normalize('ёжик, Ёлка',True,True))
+print(normalize('Hello\r\nWorld',True,True))
+print(normalize('двойные   пробелы',True,True))
 
 
 
