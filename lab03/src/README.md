@@ -4,18 +4,22 @@
 
 normalize
 
+![alt text](<../images/image copy 7.png>)
 ![alt text](image.png)
 
 tokenize
 
+![alt text](<../images/image copy 8.png>)
 ![alt text](<../images/image copy.png>)
 
 count_freq
 
+![alt text](<../images/image copy 9.png>)
 ![alt text](<../images/image copy 2.png>)
 
 top_n(count_freq)
 
+![alt text](<../images/image copy 10.png>)
 ![alt text](<../images/image copy 3.png>)
 
 <h1> B <h1>
