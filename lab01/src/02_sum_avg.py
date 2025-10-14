@@ -1,0 +1,5 @@
+a=float(input("число A"))
+b=float(input('Число B'))
+print(f'сумма={a+b}')
+roundedsr= round((a+b)/2,2)
+print(f'среднее={roundedsr}')

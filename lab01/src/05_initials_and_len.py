@@ -1,0 +1,6 @@
+fio=str(input('ФИО '))
+fio=fio.replace('  ',"")
+fin=fio.split()
+initials = ''.join(bukva[0].upper() for bukva in fin)
+print(f"Инициалы: {initials}")
+print(len(fio))
