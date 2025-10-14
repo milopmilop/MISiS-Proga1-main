@@ -2,8 +2,6 @@
 <h1>A<h1>
 
 
-jdjdjdj
-
 normalize
 
 ![alt text](image.png)
