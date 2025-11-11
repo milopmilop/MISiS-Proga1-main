@@ -13,10 +13,10 @@ def normalize(text, casefold, yo2e):
     
     return text
 
-print(normalize('ПрИвЕт\nМИр\t',True,True))
-print(normalize('ёжик, Ёлка',True,True))
-print(normalize('Hello\r\nWorld',True,True))
-print(normalize('двойные   пробелы',True,True))
+# print(normalize('ПрИвЕт\nМИр\t',True,True))
+# print(normalize('ёжик, Ёлка',True,True))
+# print(normalize('Hello\r\nWorld',True,True))
+# print(normalize('двойные   пробелы',True,True))
 
 
 
@@ -60,10 +60,9 @@ def count_freq(alp):
 # print(count_freq(["a","b","a","c","b","a"]))
 # print(count_freq(["bb","aa","bb","aa","cc"]))
 
-def top_n(dict):
-    sortedByAlpha = sorted(dict.items(), key=lambda x: x[0])
-    sortedByCount = sorted(sortedByAlpha, key=lambda x: x[1], reverse=True)
-    return sortedByCount
+def top_n(dict, n):
+    ans = sorted(list(dict.items()), key=lambda x: (-x[1], x[0]))
+    return ans[:n]
 
 # print(top_n(count_freq(["a","b","a","c","b","a"])))
 # print(top_n(count_freq(["bb","aa","bb","aa","cc"])))
