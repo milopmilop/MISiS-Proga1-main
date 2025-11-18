@@ -19,6 +19,9 @@ all_text = read_txt('/Users/vasya/Downloads/MISiS-Proga1-main/src/lab04/text', '
 
 def write_csv(rows, path, header = None):
     p= Path(path)
+    # if path[-4:] == '.csv':
+        # print (f'неверный формат')
+        # return ''
     rows = list(rows)
     with p.open('w', newline='', encoding='utf-8') as f:
         w = csv.writer(f)
