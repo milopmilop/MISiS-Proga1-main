@@ -31,4 +31,4 @@ def csv_to_xlsx(csv_path, xlsx_path):
         ws.append(i)
     wb.save(xlsx_path)
          
-print(csv_to_xlsx('/Users/vasya/Downloads/MISiS-Proga1-main/src/lab05/A.csv','/Users/vasya/Downloads/MISiS-Proga1-main/src/lab05/B.xlsx'))
+# print(csv_to_xlsx('/Users/vasya/Downloads/MISiS-Proga1-main/src/lab05/A.csv','/Users/vasya/Downloads/MISiS-Proga1-main/src/lab05/B.xlsx'))

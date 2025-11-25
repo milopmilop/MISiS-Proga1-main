@@ -2,28 +2,28 @@ import argparse
 import sys
 from pathlib import Path
 sys.path.append(r'/Users/vasya/Downloads/MISiS-Proga1-main/src/lab04/')
-from io_txt_csv import*
+from io_txt_csv import *
 sys.path.append(r'/Users/vasya/Downloads/MISiS-Proga1-main/src/lab03/src/A.py')
 from A import*
 
 def cat(file_path, count=False):
     number = 1
     try:
-        with open(file_path, 'utf-8') as f:
+        with open(file_path, encoding='utf-8') as f:
             for i in f:
-                if count != False:
-                    print(f'{number}, {i.strip()}')
+                if count:
+                    print(f'{number}. {i.strip()}')
                 else:
-                    print(i.strip)
+                    print(i.strip())
                 number += 1
     except FileNotFoundError:
-        return 'файл не найден'
+        return f'Ошибка. файл {file_path} не найден!'
     
 def stats(file_path, top=5):
     file_path = Path(file_path)
     try:
         txt = read_txt(file_path)
-        print(f'всего слов{len(tokenize(txt))}')
+        print(f'Всего слов: {len(tokenize(txt))}')
         print(f'Уникальных слов: {len(set(tokenize(txt)))}')
         print('Top-5:')
         for i in top_n(count_freq(tokenize(txt)), top):
@@ -37,9 +37,9 @@ def main():
     subparsers = parser.add_subparsers(dest="command")
 
     # подкоманда cat
-    cat_parser = subparsers.add_parser("cat", help="Вывести содержимое файла")
+    cat_parser = subparsers.add_parser("cat", help="Вывести содержимое файла") # Пользуемся не стандартным --in, поэтому до этого сделали subpars cat
     cat_parser.add_argument("--input", required=True)
-    cat_parser.add_argument("-n", action="store_true", help="Нумеровать строки")
+    cat_parser.add_argument("-n", dest='count', action="store_true", help="Нумеровать строки") # action - если дан аргумент -n, значит нумерация строк будет, иначе False
 
     # подкоманда stats
     stats_parser = subparsers.add_parser("stats", help="Частоты слов")
@@ -47,10 +47,11 @@ def main():
     stats_parser.add_argument("--top", type=int, default=5)
 
     args = parser.parse_args()
-
     if args.command == "cat":
-        """ Реализация команды cat """
+        cat(args.input, args.count)
+
     elif args.command == "stats":
-        """ Реализация команды stats """
-if __name__ == "__main__":
+        stats(args.input, args.top)
+
+if __name__ == '__main__':
     main()

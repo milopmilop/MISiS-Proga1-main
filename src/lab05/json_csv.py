@@ -52,4 +52,4 @@ def csv_to_json(csv_path, json_path):
         json.dump(rows, json_file, indent=2)
     return 'Файл создан'
 
-print(csv_to_json('/Users/vasya/Downloads/MISiS-Proga1-main/src/lab05/A.csv','/Users/vasya/Downloads/MISiS-Proga1-main/src/lab05/A1.json'))
+# print(csv_to_json('/Users/vasya/Downloads/MISiS-Proga1-main/src/lab05/A.csv','/Users/vasya/Downloads/MISiS-Proga1-main/src/lab05/A1.json'))

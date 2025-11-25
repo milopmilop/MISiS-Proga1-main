@@ -1,13 +1,14 @@
 import argparse
 import sys
 from pathlib import Path
-sys.path.append(r'C:\Users\vasya\Downloads\MISiS-Proga1-main\src\lab04\io_txt_csv.py')
-from io_txt_csv import*
-sys.path.append(r'C:\Users\vasya\Downloads\MISiS-Proga1-main\src\lab03\src\A.py')
-from A import*
-sys.path.append(r'C:\Users\vasya\Downloads\MISiS-Proga1-main\src\lab05')
-from json_csv import*
-from csv_xlsx import*
+
+sys.path.append(r'/Users/vasya/Downloads/MISiS-Proga1-main/src/lab04')
+from io_txt_csv import *
+sys.path.append(r'/Users/vasya/Downloads/MISiS-Proga1-main/src/lab03/src')
+from A import *
+sys.path.append(r'/Users/vasya/Downloads/MISiS-Proga1-main/src/lab05')
+from json_csv import json_to_csv, csv_to_json
+from csv_xlsx import csv_to_xlsx
 
 def main():
     parser = argparse.ArgumentParser(description="Конвертеры данных")
@@ -27,14 +28,14 @@ def main():
 
     args = parser.parse_args()
 
-    if args.command == "json2csv":
-        json_to_csv(args.input, args.out)
+    if args.cmd == "json2csv":
+        json_to_csv(args.input, args.output)
 
-    elif args.command == "scv2json":
-        csv_to_json(args.input, args.out)
+    elif args.cmd == "csv2json":
+        csv_to_json(args.input, args.output)
 
-    elif args.commnd == 'csv2xlsx':
-        csv_to_xlsx(args.input, args.out)
+    else:
+        csv_to_xlsx(args.input, args.output)
 
 if __name__ == '__main__':
     main()
