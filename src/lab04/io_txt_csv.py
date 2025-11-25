@@ -41,5 +41,5 @@ data = []
 for i in top_n(count_freq(tokenize(all_text)), 5):
     data.append(((f'{i[0]}'),(f'{i[1]}')))
 
-print(data)    
-print(write_csv(data,'/Users/vasya/Downloads/MISiS-Proga1-main/src/lab04/io_txt_csv_report', ('word', 'count')))
+# print(data)    
+# print(write_csv(data,'/Users/vasya/Downloads/MISiS-Proga1-main/src/lab04/io_txt_csv_report', ('word', 'count')))
