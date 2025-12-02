@@ -2,13 +2,16 @@ import argparse
 import sys
 from pathlib import Path
 
-sys.path.append(r'/Users/vasya/Downloads/MISiS-Proga1-main/src/lab04')
+sys.path.append(r"/Users/vasya/Downloads/MISiS-Proga1-main/src/lab04")
 from io_txt_csv import *
-sys.path.append(r'/Users/vasya/Downloads/MISiS-Proga1-main/src/lab03/src')
+
+sys.path.append(r"/Users/vasya/Downloads/MISiS-Proga1-main/src/lab03/src")
 from A import *
-sys.path.append(r'/Users/vasya/Downloads/MISiS-Proga1-main/src/lab05')
+
+sys.path.append(r"/Users/vasya/Downloads/MISiS-Proga1-main/src/lab05")
 from json_csv import json_to_csv, csv_to_json
 from csv_xlsx import csv_to_xlsx
+
 
 def main():
     parser = argparse.ArgumentParser(description="Конвертеры данных")
@@ -37,5 +40,6 @@ def main():
     else:
         csv_to_xlsx(args.input, args.output)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
