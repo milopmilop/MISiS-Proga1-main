@@ -15,10 +15,7 @@ dev = [
   "ruff>=0.6"
 ]
 
-dependencies = [
-  "requests>=2.32",
-  "pandas>=2.2"
-]
+dependencies = []
 
 [tool.coverage.run]
 source = ["src"]
