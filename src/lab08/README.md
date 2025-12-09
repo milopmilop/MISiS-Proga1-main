@@ -2,7 +2,7 @@
 
 ![alt text](../../images/lab08/lib1.png)
 
-![alt text](../../images/lab08/lib2.png)
+![alt text](../../images/lab08/models1.png)
 
 ![alt text](../../images/lab08/lib2.png)
 
