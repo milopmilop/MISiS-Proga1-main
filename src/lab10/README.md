@@ -71,7 +71,7 @@ class Queue:
     def __len__(self):
         """Возвращает количество элементов в очереди"""
         return len(self._data)
-        ```
+```
 
 linked_list
 
@@ -167,7 +167,7 @@ class SinglyLinkedList:
         """Строковое представление списка"""
         values = list(self)
         return f"SinglyLinkedList({values})"
-        ```
+```
 вывод после работы:
 
 ![alt text](../../images/lab10/image.png)
